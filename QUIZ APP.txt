@@ -1,0 +1,42 @@
+question1 = """What other country, besides the US, uses the US dollar as its official currency?
+ a.Ecuador
+ b.Canada
+ c.Mexico
+ d.United Kingdom """
+
+question2 = """ How many sides does a dodecahedron have?
+ a.12
+ b.24
+ c.14
+ d.20"""
+question3 = """ The Statue of Liberty was a gift to the United States from which European country?
+ a.Belgium
+ b.Germany
+ c.Spain
+ d.France"""
+question4 =  """The human body is made up of approximately how much water?
+ a.40%
+ b.50%
+ c.60%
+ d.70%"""
+
+questions = {question1: "b", question2: "c", question3: "d", question4: "d"}
+n = input("enter player's name")
+print("hello {} welcome to the quiz ",n)
+score = 0
+for i in questions:
+    print(i)
+    skip = input("do you want to skip and go to next question? yes/no : ")
+    if skip == "yes":
+        continue;
+    answer = input("enter your answer : (A/B/C/D)")
+    if answer == questions[i]:
+        print("that's right answer")
+        score +=1
+    else:
+        print("not right")
+        score -=1
+    quiz = input("do you want to end the quiz? yes/no")
+    if quiz == "yes":
+        break
+print("your score is",(score))

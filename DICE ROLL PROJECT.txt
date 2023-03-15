@@ -1,0 +1,56 @@
+import random
+def roll():
+    side = {                                     ##this is a dictionary it has key and 
+        1: ("|-------|",                               values
+            "|       |",
+            "|   0   |",
+            "|       |",                      to call individual values :
+            "|       |",
+            "|_______|",),                          print("\n".join(side[6]))
+
+
+        2: ("|-------|",
+            "| O     |",
+            "|       |",
+            "|       |",
+            "|     O |",
+            "|_______|",),
+
+
+        3: ("|-------|",
+            "| O     |",
+            "|       |",
+            "|   O   |",
+            "|       |",
+            "|______0|",),
+
+        4: ("|-------|",
+            "| O   0 |",
+            "|       |",
+            "|       |",
+            "| 0   O |",
+            "|_______|",),
+        5: ("|-------|",
+            "|       |",
+            "|   0   |",
+            "|       |",
+            "|       |",
+            "|_______|",),
+
+        6: ("|-------|",
+            "| 0   0 |",
+            "|       |",
+            "| 0   0 |",
+            "|       |",
+            "|_0___0_|",)
+    }
+    roll = input("do you want to roll the dices:(yes/no)")
+    while roll.lower() == "yes".lower():
+        dice1 = random.randint(1, 6)
+        dice2 = random.randint(1, 6)
+
+        print("the numbers are")
+        print("\n".join(side[dice1]))
+        print("\n".join(side[dice2]))
+        roll = input("roll again? (yes/no) : ")
+roll()

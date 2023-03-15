@@ -1,0 +1,74 @@
+import matplotlib.pyplot as plt
+
+
+def bar_plot():
+    plt.plot(a,b)
+    plt.title(input("enter the title"))
+    plt.xlabel(input("enter the x lable"))
+    plt.ylabel(input("enter the y lable"))
+    plt.show()
+
+def pie_chart():
+    plt.plot(a,b)
+    plt.title(input("enter the title"))
+    plt.xlabel(input("enter the x lable"))
+    plt.ylabel(input("enter the y lable"))
+    plt.show()
+
+a = []
+b = []
+
+n = int(input("enter the number of students"))
+for i in range(n):
+    values_x = input("enter the student name")
+    a.append(values_x)
+    values_y = int(input("enter the students marks"))
+    b.append(values_y)
+
+bar_plot()
+
+***********************************************************************************************************************************
+import matplotlib.pyplot as plt
+
+def bar_plot(x_values, y_values, title, xlabel, ylabel):
+    plt.bar(x_values, y_values)
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.grid()
+    plt.show()
+
+def pie_chart(x_values, y_values, title):
+    plt.pie(y_values, labels=x_values)
+    plt.title(title)
+    plt.legend()
+    plt.show()
+
+def scatter_chart(x_values,y_values,title):
+    plt.scatter(x_values,y_values)
+    plt.title(title)
+    plt.show()
+
+x_values = []
+y_values = []
+n = int(input("Enter the number of contents: "))
+for i in range(n):
+    x = input("Enter the name of context(x_axis): ")
+    x_values.append(x)
+    y = int(input("Enter the number you want to plot(y_axis: "))
+    y_values.append(y)
+choice = input("Enter the choice of graph you want (bar/pie/scatter): ")
+
+if choice == "bar":
+    title = input("Enter the title: ")
+    xlabel = input("Enter the x label: ")
+    ylabel = input("Enter the y label: ")
+    bar_plot(x_values, y_values, title, xlabel, ylabel)
+elif choice == "pie":
+    title = input("Enter the title: ")
+    pie_chart(x_values, y_values, title)
+elif choice =="scatter":
+    title = input("enter the title")
+    scatter_chart(x_values,y_values,title)
+else:
+    print("Wrong input")
