@@ -1,35 +1,5 @@
 import matplotlib.pyplot as plt
 
-
-def bar_plot():
-    plt.plot(a,b)
-    plt.title(input("enter the title"))
-    plt.xlabel(input("enter the x lable"))
-    plt.ylabel(input("enter the y lable"))
-    plt.show()
-
-def pie_chart():
-    plt.plot(a,b)
-    plt.title(input("enter the title"))
-    plt.xlabel(input("enter the x lable"))
-    plt.ylabel(input("enter the y lable"))
-    plt.show()
-
-a = []
-b = []
-
-n = int(input("enter the number of students"))
-for i in range(n):
-    values_x = input("enter the student name")
-    a.append(values_x)
-    values_y = int(input("enter the students marks"))
-    b.append(values_y)
-
-bar_plot()
-
-***********************************************************************************************************************************
-import matplotlib.pyplot as plt
-
 def bar_plot(x_values, y_values, title, xlabel, ylabel):
     plt.bar(x_values, y_values)
     plt.title(title)
