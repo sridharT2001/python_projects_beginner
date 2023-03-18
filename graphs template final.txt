@@ -9,7 +9,7 @@ def bar_plot(x_values, y_values, title, xlabel, ylabel):
     plt.show()
 
 def pie_chart(x_values, y_values, title):
-    plt.pie(y_values, labels=x_values)
+    plt.pie(y_values, labels=x_values,autopct='%1.0f%%'))
     plt.title(title)
     plt.legend()
     plt.show()
